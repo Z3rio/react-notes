@@ -1,41 +1,101 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.App.lightmode {
+  color-scheme: light dark;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fff;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App.darkmode {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  transition: 250ms;
+
+  width: calc(100vw - 20rem);
+  min-height: calc(100vh - 12rem);
+  height: fit-content;
+
+  padding: 6rem 10rem;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header {
+  display: flex;
+  align-items: center;
 }
 
-.card {
-  padding: 2em;
+.header h1 {
+  margin: 0px;
+
+  font-size: 3rem;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
 }
 
-.read-the-docs {
-  color: #888;
+.header .mdi {
+  margin-left: auto;
+  font-size: 2rem;
+
+  transition: 300ms;
+}
+
+.header .mdi:hover {
+  cursor: pointer;
+
+  scale: 1.1;
+
+  transition: 300ms;
+}
+
+.App input {
+  outline: none;
+  border: none;
+
+  padding: 15px 10px 15px 50px;
+  width: calc(100% - 60px);
+
+  border-radius: 50px;
+
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.darkmode input {
+  color: rgba(255, 255, 255, 0.87);
+  background: rgb(60, 60, 60);
+}
+
+.lightmode input {
+  color: black;
+  background: rgb(225, 225, 225);
+}
+
+.search {
+  margin-top: 40px;
+
+  position: relative;
+}
+
+.App .mdi-magnify {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+
+  margin-left: 12px;
+
+  font-size: 1.7rem;
+
+  height: 100%;
 }
