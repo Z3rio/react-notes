@@ -12,6 +12,10 @@ body {
   place-items: center;
 }
 
+* {
+  margin: 0;
+}
+
 body,
 #root {
   margin: 0;
@@ -46,28 +50,71 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.lightmode ::placeholder {
+/* INPUT & TEXTAREA */
+.darkmode input {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+textarea {
+  color: rgb(50, 50, 50);
+}
+
+.lightmode input {
+  color: rgb(50, 50, 50);
+}
+
+/* PLACEHOLDER */
+
+/* LIGHTMODE */
+.lightmode input ::placeholder {
   color: rgb(50, 50, 50);
   opacity: 1;
 }
 
-.lightmode :-ms-input-placeholder {
+.lightmode input :-ms-input-placeholder {
   color: rgb(50, 50, 50);
 }
 
-.lightmode ::-ms-input-placeholder {
+.lightmode input ::-ms-input-placeholder {
   color: rgb(50, 50, 50);
 }
 
-.darkmode ::placeholder {
+.lightmode textarea ::placeholder {
   color: rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
 
-.darkmode :-ms-input-placeholder {
+.lightmode textarea :-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.darkmode ::-ms-input-placeholder {
+.lightmode textarea ::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.7);
+}
+
+/* DARK MODE */
+.darkmode input ::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}
+
+.darkmode input :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.darkmode input ::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.darkmode textarea ::placeholder {
+  color: rgb(50, 50, 50);
+  opacity: 1;
+}
+
+.darkmode textarea :-ms-input-placeholder {
+  color: rgb(50, 50, 50);
+}
+
+.darkmode textarea ::-ms-input-placeholder {
+  color: rgb(50, 50, 50);
 }

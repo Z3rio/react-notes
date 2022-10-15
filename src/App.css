@@ -36,8 +36,6 @@
 }
 
 .header h1 {
-  margin: 0px;
-
   font-size: 3rem;
   font-family: "Arial", sans-serif;
   font-weight: bold;
@@ -72,12 +70,10 @@
 }
 
 .darkmode input {
-  color: rgba(255, 255, 255, 0.87);
   background: rgb(60, 60, 60);
 }
 
 .lightmode input {
-  color: black;
   background: rgb(225, 225, 225);
 }
 
@@ -98,4 +94,93 @@
   font-size: 1.7rem;
 
   height: 100%;
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+
+  margin-top: 20px;
+}
+
+.note {
+  margin: 1rem;
+  padding: 1.25rem 1.75rem;
+
+  min-height: 25rem;
+  height: fit-content;
+
+  background: #fef68b;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+
+  padding-top: 1rem;
+  margin-top: auto;
+}
+
+.bottom h2 {
+  font-family: "Arial", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgb(50, 50, 50);
+}
+
+.bottom .mdi {
+  color: rgb(50, 50, 50);
+  font-size: 1.75rem;
+
+  margin-left: auto;
+
+  transition: 300ms;
+}
+
+.bottom .mdi:hover {
+  cursor: pointer;
+
+  transform: scale(1.1);
+
+  transition: 300ms;
+}
+
+.bottom button {
+  margin-left: auto;
+
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+
+  border-radius: 12.5px;
+}
+
+.darkmode .bottom button {
+  background: rgb(50, 50, 50);
+}
+
+.lightmode .bottom button {
+  background: #c1bd56;
+}
+
+.noteText {
+  position: relative;
+
+  flex: 1;
+
+  background: transparent;
+
+  border: none;
+  outline: none;
+
+  color: rgb(50, 50, 50);
+  font-size: 1.2rem;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+
+  resize: none;
 }
