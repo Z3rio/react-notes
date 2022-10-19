@@ -1,3 +1,4 @@
+![Logo](https://user-images.githubusercontent.com/54480523/196753430-8581b165-4405-466d-a308-33ee08ffc611.png)
 # Zerio Notes
 This is a notes app that I made to try and learn more about React.
 
