@@ -3,6 +3,8 @@ import "./App.css";
 
 function App() {
   // Variables
+  const maxLength = 500;
+
   const date = new Date();
 
   const [darkTheme, setDarkTheme] = useState(() => {
@@ -122,10 +124,10 @@ function App() {
             value={noteText}
             onChange={handleNoteTextChange}
             placeholder="Type anything"
-            maxLength="250"
+            maxLength={maxLength}
           ></textarea>
           <div className="bottom">
-            <h2>{(250 - noteText.length).toString()} Remaining</h2>
+            <h2>{(maxLength - noteText.length).toString()} Remaining</h2>
             <button onClick={addNote}>Add</button>
           </div>
         </div>
