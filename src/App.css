@@ -1,3 +1,12 @@
+* ::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .App.lightmode {
   color-scheme: light dark;
   color: rgba(0, 0, 0, 0.87);
@@ -98,7 +107,7 @@
 
 .notes {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 50% 50%;
 
   margin-top: 20px;
 }
@@ -183,4 +192,16 @@
   font-weight: 400;
 
   resize: none;
+}
+
+@media (min-width: 1000px) {
+  .notes {
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+}
+
+@media (min-width: 2000px) {
+  .notes {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
 }
